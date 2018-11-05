@@ -1,0 +1,349 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders children 1`] = `
+<div>
+  <h1>
+    Content
+  </h1>
+  <div>
+    <div>
+      <h2>
+        de-DE
+      </h2>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          title
+          : 
+        </span>
+        Hallo SDKs
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          shortDescription
+          : 
+        </span>
+        Lernen Sie den Umgang mit unseren SDKs.
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          description
+          : 
+        </span>
+        Sobald Sie sich den Quellcode der Besipielanwendung ansehen, werden Sie ein Gespür entwickeln, wie Sie am besten die Contentful SDKs in Ihrer Programmiersprache benutzen. Für weitere, fremde Abhängigkeiten, schauen Sie bitte in der jewiligen Dokumentation nach.
+      </div>
+    </div>
+    <div>
+      <h2>
+        en-US
+      </h2>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          title
+          : 
+        </span>
+        Hello SDKs
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          slug
+          : 
+        </span>
+        hello-sdks
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          image
+          : 
+        </span>
+        <img
+          alt="Contentful hero"
+          className="content-img"
+          src="//images.ctfassets.net/tw4ymfsmbef6/6nvWJT1AkM64so8Auue4QQ/328f902b490337ec0dd391e202c173ef/EngineeringHistory.png"
+        />
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          shortDescription
+          : 
+        </span>
+        Learn about best practices when using our SDKs.
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          description
+          : 
+        </span>
+        By looking at the code of the example app, you'll get a sense of how to use a Contentful SDK in your favorite programming language.
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          duration
+          : 
+        </span>
+        5
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          skillLevel
+          : 
+        </span>
+        beginner
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Renders content 1`] = `
+<div>
+  <h1>
+    Content
+  </h1>
+  <div>
+    <div>
+      <h2>
+        de-DE
+      </h2>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          title
+          : 
+        </span>
+        Hallo SDKs
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          shortDescription
+          : 
+        </span>
+        Lernen Sie den Umgang mit unseren SDKs.
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          description
+          : 
+        </span>
+        Sobald Sie sich den Quellcode der Besipielanwendung ansehen, werden Sie ein Gespür entwickeln, wie Sie am besten die Contentful SDKs in Ihrer Programmiersprache benutzen. Für weitere, fremde Abhängigkeiten, schauen Sie bitte in der jewiligen Dokumentation nach.
+      </div>
+    </div>
+    <div>
+      <h2>
+        en-US
+      </h2>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          title
+          : 
+        </span>
+        Hello SDKs
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          slug
+          : 
+        </span>
+        hello-sdks
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          image
+          : 
+        </span>
+        <img
+          alt="Contentful hero"
+          className="content-img"
+          src="//images.ctfassets.net/tw4ymfsmbef6/6nvWJT1AkM64so8Auue4QQ/328f902b490337ec0dd391e202c173ef/EngineeringHistory.png"
+        />
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          shortDescription
+          : 
+        </span>
+        Learn about best practices when using our SDKs.
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          description
+          : 
+        </span>
+        By looking at the code of the example app, you'll get a sense of how to use a Contentful SDK in your favorite programming language.
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          duration
+          : 
+        </span>
+        5
+      </div>
+      <div
+        className="content-field"
+      >
+        <span
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          skillLevel
+          : 
+        </span>
+        beginner
+      </div>
+    </div>
+  </div>
+</div>
+`;
