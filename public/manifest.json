@@ -1,5 +1,5 @@
 {
-  "short_name": "react-contenful-pwa",
+  "short_name": "CntntfulPWA",
   "name": "React Contenful PWA",
   "icons": [
     {
@@ -9,11 +9,11 @@
     },
     {
       "src": "logo.svg",
-      "sizes": "512x512",
+      "sizes": "192x192 512x512",
       "type": "image/svg"
     }
   ],
-  "start_url": ".",
+  "start_url": "/index.html",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#2a333d"

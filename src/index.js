@@ -11,7 +11,11 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore(rootReducer, compose(applyMiddleware(sagaMiddleware), window.__REDUX_DEVTOOLS_EXTENSION__()));
+const middleware = [
+  applyMiddleware(sagaMiddleware),
+];
+if(process.env.NODE_ENV !== 'production') middleware.push(window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(rootReducer, compose(...middleware));
 // const store = createStore(rootReducer, applyMiddleware(sagaMiddleware) window.__REDUX_DEVTOOLS_EXTENSION__());
 
 sagaMiddleware.run(rootSaga);
