@@ -1,17 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Layout from './Layout';
-import renderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Layout><div>Test</div></Layout>, div);
-  ReactDOM.unmountComponentAtNode(div);
+  const tree = shallow(<Layout><div>Test</div></Layout>);
+  expect(tree).toMatchSnapshot();
 });
 
 it('Renders children', () => {
-  const tree = renderer
-    .create(<Layout><div>Test</div></Layout>)
-    .toJSON();
+  const tree = shallow(<Layout><div>Test</div></Layout>);
   expect(tree).toMatchSnapshot();
 });

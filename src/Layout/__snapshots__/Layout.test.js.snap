@@ -9,3 +9,13 @@ exports[`Renders children 1`] = `
   </div>
 </div>
 `;
+
+exports[`renders without crashing 1`] = `
+<div
+  className="layout"
+>
+  <div>
+    Test
+  </div>
+</div>
+`;

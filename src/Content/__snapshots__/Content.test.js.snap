@@ -6,12 +6,15 @@ exports[`Renders content 1`] = `
     Content
   </h1>
   <div>
-    <div>
+    <div
+      key="de-DE"
+    >
       <h2>
         de-DE
       </h2>
       <div
         className="content-field"
+        key="title"
       >
         <span
           style={
@@ -27,6 +30,7 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
+        key="shortDescription"
       >
         <span
           style={
@@ -42,6 +46,7 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
+        key="description"
       >
         <span
           style={
@@ -56,12 +61,15 @@ exports[`Renders content 1`] = `
         Sobald Sie sich den Quellcode der Besipielanwendung ansehen, werden Sie ein Gespür entwickeln, wie Sie am besten die Contentful SDKs in Ihrer Programmiersprache benutzen. Für weitere, fremde Abhängigkeiten, schauen Sie bitte in der jewiligen Dokumentation nach.
       </div>
     </div>
-    <div>
+    <div
+      key="en-US"
+    >
       <h2>
         en-US
       </h2>
       <div
         className="content-field"
+        key="title"
       >
         <span
           style={
@@ -77,6 +85,7 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
+        key="slug"
       >
         <span
           style={
@@ -92,6 +101,7 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
+        key="image"
       >
         <span
           style={
@@ -111,6 +121,7 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
+        key="shortDescription"
       >
         <span
           style={
@@ -126,6 +137,7 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
+        key="description"
       >
         <span
           style={
@@ -141,6 +153,7 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
+        key="duration"
       >
         <span
           style={
@@ -156,6 +169,7 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
+        key="skillLevel"
       >
         <span
           style={
