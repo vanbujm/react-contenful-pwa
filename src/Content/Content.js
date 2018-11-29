@@ -1,32 +1,25 @@
 import React from 'react';
-import { connect } from 'react-redux';
-
-import { actionCreators } from '../actions';
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
+import { compose, mapProps } from 'recompose';
+import { pick, omit } from 'lodash/object';
+import { startCase } from 'lodash/string';
 
 import './Content.css';
 
-const { content: fetchContent } = actionCreators;
-
-const splitToLocale = content => (locales, key) => {
-  const data = content[key];
-  const localesForKey = Object.keys(data);
-  localesForKey.forEach(locale => {
-    locales[locale] = { ...locales[locale], [key]: content[key][locale] };
-  });
+const splitToLocale = (locales, course) => {
+  if (locales[course.locale] === undefined) locales[course.locale] = [];
+  locales[course.locale].push(omit(course, 'locale'));
   return locales;
 };
 
-const parseFields = (key, value, locale) => {
+const parseFields = (key, value) => {
   if (typeof value === 'string') return value;
   switch (key) {
     case 'image':
-      const localeWithDefault =
-        value.fields.file[locale] === undefined
-          ? value.fields.file[Object.keys(value.fields.file)[0]]
-          : locale;
-      const url = value.fields.file[localeWithDefault].url;
-      const title = value.fields.title[localeWithDefault];
-      return <img className="content-img" src={url} alt={title} />;
+      return (
+        <img className="content-img" src={value.url} alt={value.altText} />
+      );
     case 'duration':
       return value;
     default:
@@ -34,29 +27,22 @@ const parseFields = (key, value, locale) => {
   }
 };
 
-const fieldsFor = (contentObj, locale) =>
-  Object.keys(contentObj).map(key => {
-    return (
+const fieldsFor = contentArr =>
+  contentArr.map(course => {
+    return Object.keys(course).map(key => (
       <div className="content-field" key={key}>
         <span style={{ fontWeight: 'bold' }}>{key}: </span>
-        {parseFields(key, contentObj[key], locale)}
+        {parseFields(key, course[key])}
       </div>
-    );
+    ));
   });
 
-export const Content = props => {
-  const { content } = props;
-  if (Object.keys(content).length === 0) props.fetchContent();
-
-  const localeSplitData = Object.keys(content).reduce(
-    splitToLocale(content),
-    {}
-  );
-
-  const fields = Object.keys(localeSplitData).map(locale => (
+export const Content = ({ courses = [] }) => {
+  const localeSplitCourses = courses.reduce(splitToLocale, {});
+  const fields = Object.keys(localeSplitCourses).map(locale => (
     <div key={locale}>
-      <h2>{locale}</h2>
-      {fieldsFor(localeSplitData[locale], locale)}
+      <h2>{startCase(locale)}</h2>
+      {fieldsFor(localeSplitCourses[locale])}
     </div>
   ));
 
@@ -68,13 +54,26 @@ export const Content = props => {
   );
 };
 
-const mapDispatchToProps = {
-  fetchContent
-};
+const propMapper = props => pick(props.data, ['courses']);
 
-const mapState = state => ({ content: state.content.fields || {} });
+const courseQuery = gql`
+  query {
+    courses(where: { courseCode: 1 }) {
+      title
+      locale
+      image {
+        url
+        altText
+      }
+      shortDescription
+      description
+      duration
+      skillLevel
+    }
+  }
+`;
 
-export default connect(
-  mapState,
-  mapDispatchToProps
+export default compose(
+  graphql(courseQuery),
+  mapProps(propMapper)
 )(Content);

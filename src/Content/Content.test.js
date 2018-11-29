@@ -2,9 +2,9 @@ import React from 'react';
 import { Content } from './Content';
 import { shallow } from 'enzyme';
 
-import exampleContenfulContent from './exampleContent';
+import exampleGraphCMSContent from './exampleContent';
 
 it('Renders content', () => {
-  const tree = shallow(<Content content={exampleContenfulContent} />);
+  const tree = shallow(<Content courses={exampleGraphCMSContent} />);
   expect(tree).toMatchSnapshot();
 });

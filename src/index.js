@@ -4,12 +4,18 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
 
 import rootSaga from './sagas';
 import rootReducer from './reducers';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+const client = new ApolloClient({
+  uri: 'https://api-apeast.graphcms.com/v1/cjo6hiawa52m901fuqghxzdib/master'
+});
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
@@ -21,7 +27,9 @@ sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
   </Provider>,
   document.getElementById('root')
 );
