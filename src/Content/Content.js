@@ -1,10 +1,11 @@
 import React from 'react';
 import { graphql } from 'react-apollo';
-import gql from 'graphql-tag';
-import { compose, mapProps } from 'recompose';
+import { compose, mapProps, branch } from 'recompose';
 import { pick, omit } from 'lodash/object';
 import { startCase } from 'lodash/string';
+import { loader } from 'graphql.macro';
 
+import Loading from '../Loading';
 import './Content.css';
 
 const splitToLocale = (locales, course) => {
@@ -54,26 +55,19 @@ export const Content = ({ courses = [] }) => {
   );
 };
 
-const propMapper = props => pick(props.data, ['courses']);
+const propMapper = ({ data }) => pick(data, ['courses']);
 
-const courseQuery = gql`
-  query {
-    courses(where: { courseCode: 1 }) {
-      title
-      locale
-      image {
-        url
-        altText
-      }
-      shortDescription
-      description
-      duration
-      skillLevel
-    }
-  }
-`;
+const courseQuery = loader('./courseQuery.graphql');
 
 export default compose(
   graphql(courseQuery),
+  branch(
+    ({ data }) => data.courses === undefined && data.loading,
+    () => () => Loading({ isLoading: true })
+  ),
+  branch(
+    ({ data }) => data.courses === undefined && data.error,
+    () => () => Loading({ error: true })
+  ),
   mapProps(propMapper)
 )(Content);

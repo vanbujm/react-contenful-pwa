@@ -1,0 +1,14 @@
+query courseQuery {
+    courses(where: { courseCode: 1 }) {
+      title
+      locale
+      image {
+        url
+        altText
+      }
+      shortDescription
+      description
+      duration
+      skillLevel
+    }
+}

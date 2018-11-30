@@ -1,11 +1,28 @@
 import React from 'react';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import Loadable from 'react-loadable';
 
 import Layout from '../Layout';
-import Home from '../Home';
-import Content from '../Content';
 import logo from '../logo.svg';
 import './App.css';
+import Loading from '../Loading';
+
+const loadingConfig = {
+  delay: 100,
+  timeout: 10000
+};
+
+const Content = Loadable({
+  loader: () => import('../Content'),
+  loading: Loading,
+  ...loadingConfig
+});
+
+const Home = Loadable({
+  loader: () => import('../Home'),
+  loading: Loading,
+  ...loadingConfig
+});
 
 const App = () => (
   <BrowserRouter>
