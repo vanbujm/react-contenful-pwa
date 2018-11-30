@@ -1578,9 +1578,10 @@ apollo-boost@0.1.22:
     apollo-link-state "^0.4.0"
     graphql-tag "^2.4.2"
 
-apollo-cache-inmemory@^1.3.11:
+apollo-cache-inmemory@1.3.11, apollo-cache-inmemory@^1.3.11:
   version "1.3.11"
   resolved "https://registry.yarnpkg.com/apollo-cache-inmemory/-/apollo-cache-inmemory-1.3.11.tgz#6cb8f24ec812715169f9acbb0b67833f9a19ec90"
+  integrity sha512-fSoyjBV5RV57J3i/VHDDB74ZgXc0PFiogheNFHEhC0mL6rg5e/DjTx0Vg+csIBk23gvlzTvV+eypx7Q2NJ+dYg==
   dependencies:
     apollo-cache "^1.1.21"
     apollo-utilities "^1.0.26"
@@ -1624,12 +1625,21 @@ apollo-link-http-common@^0.2.6:
   dependencies:
     apollo-link "^1.2.4"
 
-apollo-link-http@^1.3.1:
+apollo-link-http@1.5.7, apollo-link-http@^1.3.1:
   version "1.5.7"
   resolved "https://registry.yarnpkg.com/apollo-link-http/-/apollo-link-http-1.5.7.tgz#098615c427a910ec8c5817476bbabe68c586b339"
+  integrity sha512-EZ9nynHjwYCpGYP5IsRrZGTWidUVpshk7MuSG4joqGtJMwpFCgMQz+y3BHdUhowHtfAd9z60XmeOTG9FJolb8A==
   dependencies:
     apollo-link "^1.2.4"
     apollo-link-http-common "^0.2.6"
+
+apollo-link-persisted-queries@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/apollo-link-persisted-queries/-/apollo-link-persisted-queries-0.2.2.tgz#156597cb259b7bb56cf4e967a7be0312954f4591"
+  integrity sha512-YL7XBu/5QsSbbYaWUXgm87T2Hn/2AQZk5Wr8CLXGDr3Wl3E/TRhBhKgQQTly9xhaTi7jgBO+AeIyTH5wCBHA9w==
+  dependencies:
+    apollo-link "^1.2.1"
+    hash.js "^1.1.3"
 
 apollo-link-state@^0.4.0:
   version "0.4.2"
@@ -1638,7 +1648,7 @@ apollo-link-state@^0.4.0:
     apollo-utilities "^1.0.8"
     graphql-anywhere "^4.1.0-alpha.0"
 
-apollo-link@^1.0.0, apollo-link@^1.0.6, apollo-link@^1.2.4:
+apollo-link@^1.0.0, apollo-link@^1.0.6, apollo-link@^1.2.1, apollo-link@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.2.4.tgz#ab4d21d2e428db848e88b5e8f4adc717b19c954b"
   dependencies:
@@ -4937,7 +4947,7 @@ hash-base@^3.0.0:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-hash.js@^1.0.0, hash.js@^1.0.3:
+hash.js@^1.0.0, hash.js@^1.0.3, hash.js@^1.1.3:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.1.5.tgz#e38ab4b85dfb1e0c40fe9265c0e9b54854c23812"
   dependencies:

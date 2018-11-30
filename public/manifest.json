@@ -1,6 +1,6 @@
 {
-  "short_name": "CntntfulPWA",
-  "name": "React Contenful PWA",
+  "short_name": "GraphCMSPWA",
+  "name": "React GraphCMS PWA",
   "icons": [
     {
       "src": "favicon.ico",

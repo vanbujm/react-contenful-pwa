@@ -6,7 +6,7 @@ import exampleContent from './exampleContent';
 import contentNotes from './notes.md';
 
 storiesOf('Content', module).add(
-  'with some contentful content',
+  'with some graphcms content',
   () => <Content content={exampleContent} />,
   {
     info: {
