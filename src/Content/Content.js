@@ -5,6 +5,7 @@ import { pick, omit } from 'lodash/object';
 import { startCase } from 'lodash/string';
 import { loader } from 'graphql.macro';
 
+import withErrorBoundary from '../withErrorBoundary';
 import Loading from '../Loading';
 import './Content.css';
 
@@ -60,6 +61,7 @@ const propMapper = ({ data }) => pick(data, ['courses']);
 const courseQuery = loader('./courseQuery.graphql');
 
 export default compose(
+  withErrorBoundary(),
   graphql(courseQuery),
   branch(
     ({ data }) => data.courses === undefined && data.loading,
