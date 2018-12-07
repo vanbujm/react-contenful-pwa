@@ -16,7 +16,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const link = createPersistedQueryLink().concat(
+const link = createPersistedQueryLink({ useGETForHashedQueries: true }).concat(
   createHttpLink({
     uri:
       process.env.NODE_ENV === 'development'
