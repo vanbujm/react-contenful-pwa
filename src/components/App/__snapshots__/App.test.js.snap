@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="logo"
+        className="App-logo"
+        src="logo.svg"
+      />
+    </a>
+    <a
+      className="link"
+      href="/content"
+      onClick={[Function]}
+    >
+      Content
+    </a>
+  </header>
+  <div
+    className="layout"
+  >
+    <div>
+      Home
+    </div>
+  </div>
+</div>
+`;

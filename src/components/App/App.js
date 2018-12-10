@@ -3,7 +3,7 @@ import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
 import Layout from '../Layout';
-import logo from '../logo.svg';
+import logo from '../../logo.svg';
 import './App.css';
 import Loading from '../Loading';
 

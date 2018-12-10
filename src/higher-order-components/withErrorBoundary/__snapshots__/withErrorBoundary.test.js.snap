@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Catches errors 1`] = `
+<h1>
+  Yikes, something went wrong.
+</h1>
+`;
+
+exports[`Excepts a different error component 1`] = `
+<h1>
+  Wow, an error...
+</h1>
+`;

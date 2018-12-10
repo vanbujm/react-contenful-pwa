@@ -6,15 +6,12 @@ exports[`Renders content 1`] = `
     Content
   </h1>
   <div>
-    <div
-      key="EnAu"
-    >
+    <div>
       <h2>
         En Au
       </h2>
       <div
         className="content-field"
-        key="title"
       >
         <span
           style={
@@ -30,7 +27,6 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
-        key="image"
       >
         <span
           style={
@@ -50,7 +46,6 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
-        key="shortDescription"
       >
         <span
           style={
@@ -66,7 +61,6 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
-        key="description"
       >
         <span
           style={
@@ -82,7 +76,6 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
-        key="duration"
       >
         <span
           style={
@@ -98,7 +91,6 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
-        key="skillLevel"
       >
         <span
           style={
@@ -113,15 +105,12 @@ exports[`Renders content 1`] = `
         Beginner
       </div>
     </div>
-    <div
-      key="DeDe"
-    >
+    <div>
       <h2>
         De De
       </h2>
       <div
         className="content-field"
-        key="title"
       >
         <span
           style={
@@ -137,7 +126,6 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
-        key="image"
       >
         <span
           style={
@@ -157,7 +145,6 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
-        key="shortDescription"
       >
         <span
           style={
@@ -173,7 +160,6 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
-        key="description"
       >
         <span
           style={
@@ -189,7 +175,6 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
-        key="duration"
       >
         <span
           style={
@@ -205,7 +190,6 @@ exports[`Renders content 1`] = `
       </div>
       <div
         className="content-field"
-        key="skillLevel"
       >
         <span
           style={

@@ -1,4 +1,4 @@
-import { actionManifest } from '../actions';
+import { actionManifest } from '../actions/index';
 
 export default (state = {}, action) => {
   switch (action.type) {

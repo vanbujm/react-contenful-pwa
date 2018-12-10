@@ -10,10 +10,10 @@ import { createPersistedQueryLink } from 'apollo-link-persisted-queries';
 import { createHttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
-import rootSaga from './sagas';
-import rootReducer from './reducers';
+import rootSaga from './redux/sagas';
+import rootReducer from './redux/reducers';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 const link = createPersistedQueryLink({ useGETForHashedQueries: true }).concat(

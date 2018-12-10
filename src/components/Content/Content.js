@@ -3,10 +3,11 @@ import { graphql } from 'react-apollo';
 import { compose, mapProps, branch } from 'recompose';
 import { pick, omit } from 'lodash/object';
 import { startCase } from 'lodash/string';
+import { isEqual } from 'lodash/lang';
 import { loader } from 'graphql.macro';
 
-import withErrorBoundary from '../withErrorBoundary';
-import Loading from '../Loading';
+import withErrorBoundary from '../../higher-order-components/withErrorBoundary';
+import Loading from '../Loading/Loading';
 import './Content.css';
 
 const splitToLocale = (locales, course) => {
@@ -60,6 +61,8 @@ const propMapper = ({ data }) => pick(data, ['courses']);
 
 const courseQuery = loader('./courseQuery.graphql');
 
+const areEqual = (prevProps, nextProps) => isEqual(prevProps, nextProps);
+
 export default compose(
   withErrorBoundary(),
   graphql(courseQuery),
@@ -72,4 +75,4 @@ export default compose(
     () => () => Loading({ error: true })
   ),
   mapProps(propMapper)
-)(Content);
+)(React.memo(Content, areEqual));

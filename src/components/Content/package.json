@@ -1,4 +1,4 @@
 {
   "name": "Content",
-  "main": "./Content.js"
+  "main": "Content.js"
 }

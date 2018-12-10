@@ -1,4 +1,4 @@
 {
   "name": "withErrorBoundary",
-  "main": "./withErrorBoundary.js"
+  "main": "withErrorBoundary.js"
 }

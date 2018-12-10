@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import TestRenderer from 'react-test-renderer';
 
 import { withErrorBoundary } from './withErrorBoundary';
 
@@ -22,14 +22,14 @@ afterAll(() => {
 
 it('Catches errors', () => {
   const ComponentThatCatchesErrors = withErrorBoundary()(ComponentThatBreaks);
-  expect(mount(<ComponentThatCatchesErrors />)).toMatchSnapshot();
+  expect(TestRenderer.create(<ComponentThatCatchesErrors />)).toMatchSnapshot();
 });
 
 it('Excepts a different error component', () => {
   const ComponentThatCatchesErrors = withErrorBoundary(() => (
     <h1>Wow, an error...</h1>
   ))(ComponentThatBreaks);
-  expect(mount(<ComponentThatCatchesErrors />)).toMatchSnapshot();
+  expect(TestRenderer.create(<ComponentThatCatchesErrors />)).toMatchSnapshot();
 });
 
 it('Accepts an error handler', () => {
@@ -38,6 +38,6 @@ it('Accepts an error handler', () => {
     null,
     error => (anError = error)
   )(ComponentThatBreaks);
-  mount(<ComponentThatCatchesErrors />);
+  TestRenderer.create(<ComponentThatCatchesErrors />);
   expect(anError).not.toBeNull();
 });

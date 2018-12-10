@@ -3,4 +3,4 @@ import { mapProps } from 'recompose';
 
 const Home = () => <div>Home</div>;
 
-export default mapProps(() => ({}))(Home);
+export default mapProps(() => ({}))(React.memo(Home));

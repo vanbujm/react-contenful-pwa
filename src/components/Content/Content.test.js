@@ -1,10 +1,12 @@
 import React from 'react';
 import { Content } from './Content';
-import { shallow } from 'enzyme';
+import TestRenderer from 'react-test-renderer';
 
 import exampleGraphCMSContent from './exampleContent';
 
 it('Renders content', () => {
-  const tree = shallow(<Content courses={exampleGraphCMSContent} />);
+  const tree = TestRenderer.create(
+    <Content courses={exampleGraphCMSContent} />
+  );
   expect(tree).toMatchSnapshot();
 });
